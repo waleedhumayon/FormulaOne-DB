@@ -1,0 +1,68 @@
+IMPORTANT POINT TO NOTE:
+1. Must run with command prompts from within an IDE like PyCharm. The program is not yet capable of handling system
+arguments from the command line.
+2. The driver file is called driver.py and can be found within the zip file submitted.
+I hope the program is satisfactory! Thank you for taking the time to go through it.
+
+
+Specifications required to run the program:
+    1. Since the program does not use sys.arg it takes command prompt inputs but not terminal ones. As such it must
+       be run using an IDE. PyCharm was used for engineering it as well as testing, and I would strongly recommend
+       using it.
+    2. It uses mysql.connector, so having that installed is also ideal.
+    3. Other than that there are very little resources required.
+
+
+Basic structure of the program:
+
+There are three key options in the program that in turn have other options within them. The ones that may require some
+extra thought are as follows:
+
+    1. Analyze:
+            a) Most podiums for a driver:
+                    Returns the database record of each driver, and the number of podiums that they have throughout
+                    the period of 2000-2017.
+                    Input: None
+                    Output: List of records for podiums won by a driver. Podium = top 3 finish in a race.
+                    Sample input: None
+            b) Most podiums by a constructor:
+                    Returns the database record of each constructor, and the number of podiums that they have throughout
+                    the period of 2000-2017.
+                    Input: None
+                    Output: List of records for podiums won by a constructor. Podium = top 3 finish in a race.
+                    Sample input: None
+            c) Most wins by a driver:
+                    Returns the database record of each driver, and the number of wins that they have throughout
+                    the period of 2000-2017.
+                    Input: None
+                    Output: List of records for podiums won by a driver.
+                    Sample input: None
+            d) Most wins by a constructor:
+                    Returns the database record of each constructor, and the number of wins that they have throughout
+                    the period of 2000-2017.
+                    Input: None
+                    Output: List of records for podiums won by a constructor.
+                    Sample input: None
+            e) Fastest lap by a driver:
+                    Input: Surname, First name, Race name (without Grand Prix), Year of the race
+                    Output: The fastest lap for the driver in the specific race.
+                    Sample input: hamilton-lewis-monaco-2014
+            f) Fastest lap speed:
+                    Input: Surname, First name, Race name (without Grand Prix), Year of the race
+                    Output: The fastest lap speed for the driver in the specific race.
+                    Sample input: ricciardo-daniel-monaco-2015
+
+
+    2. Create:
+            a) Create driver profile:
+                   Input: Is prompted one after the other, after which the driver profile is created.
+                   Output: Rows in the application, entry in the database.
+            b) Create race record:
+                   Same as the driver profile creation. Can make multiple race records for the same driver to
+                   be as close to reality and more usable.
+
+    3. Update/remove:
+            Will prompt you in a similar manner as the ones above. Their input will be gathered through the prompts,
+            and will remove/update items in the database accordingly.
+            NOTE: Removing a driver will remove the race records associated with that driver. There is a TRIGGER in
+            the database that ensures that is the case.
